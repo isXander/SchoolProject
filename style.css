@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#landing-background {
+    background: url('https://townsquare.media/site/366/files/2021/03/Rock-in-Rio-crowd.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89');
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+}
+
+#tickets-background {
+    background-color: #303030;
+}
+
+#artists-background {
+    background-color: #303030;
+}
+
+header {
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#icon {
+    margin: auto;
+    text-align: center;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fafafa;
+    text-decoration: none;
+
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+
+    background-color: #ff4747;
+    padding: 0 5px;
+
+    user-select: none;
+
+    transition-duration: 0.3s;
+    transition-property: transform, text-shadow, background;
+
+    perspective: 50px;
+}
+
+#icon span {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+#icon:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px #ffffffee, 0 0 10px #ffffffee;
+}
+
+#icon::after {
+    content: "";
+
+    width: 120%;
+    height: 30%;
+    position: absolute;
+    bottom: -30%;
+    left: -8px;
+
+    transform-style: preserve-3d;
+    transform: rotateX(60deg);
+    background: linear-gradient(to bottom, #ff4747, rgba(255, 71, 71, 0.4) 20%, rgba(255, 71, 71, 0));
+}
+
+#icon:hover::after {
+    background: linear-gradient(to bottom, #ff4747, rgba(255, 71, 71, 0.4) 40%, rgba(255, 71, 71, 0));
+}
+
+
+#navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 5px;
+    border-radius: 15px;
+}
+
+#navigation a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.big-button {
+    padding: 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fafafa;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    border-radius: 5px;
+    transition-duration: 0.3s
+}
+
+.big-button:hover {
+    background-color: inherit;
+    color: #fafafa;
+    background-color: #ff4747;
+    font-weight: 700;
+    transform: scaleX(1.1);
+    letter-spacing: 2px;
+}
+
+#motto {
+    text-align: center;
+    font-weight: 800;
+    font-size: 125px;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.5ch;
+}
+
+#motto span {
+    color: #ff4747;
+    letter-spacing: 3px;
+    font-weight: 900;
+    text-shadow: 0 0 10px black;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 100px;
+}
+
+.regular-button {
+    text-align: center;
+    text-decoration: none;
+    color: #fafafa;
+    background-color: #ff4747;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition-duration: 1s;
+    transform-style: preserve-3d;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.regular-button:hover {
+    transform: scale(1.5) rotateX(20deg);
+    border-color: #303030;
+}
+
+#tickets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.ticket-element {
+    flex: 1 0 25%;
+    /* flex: 1; */
+    min-width: 250px;
+    min-height: 350px;
+    background-color: #202020;
+}
+
+.ticket-name {
+    background-color: #ff4747;
+    color: #fafafa;
+    padding: 10px 0;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+}
+
+.ticket-content {
+    color: #fafafa;
+    margin: 2px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ticket-price {
+    rotate: 10deg;
+    font-size: 50px;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+#basic-ticket .ticket-name {
+    font-weight: 300;
+    background-color: black;
+}
+
+#premium-ticket .ticket-name {
+    font-weight: 600;
+}
+
+#vip-ticket .ticket-name {
+    font-weight: 800;
+    letter-spacing: 0.5ch;
+    color: #ff4747;
+    background-color: #202020;
+}
+
+#artists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.artist-element {
+    flex: 1 0 25%;
+    /* flex: 1; */
+    min-width: 250px;
+    min-height: 250px;
+    background-color: #202020;
+}
+
+.artist-name {
+    background-color: #ff4747;
+    color: #fafafa;
+    padding: 10px 0;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+}
+
+.artist-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.artist-img {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height: auto;
+}
+
+.artist-description {
+    color: #fafafa;
+    padding: 0 5px;
+}
+
+.acrylic {
+    /* Parent background + Gaussian blur */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Exclusion blend */
+    background-blend-mode: exclusion;
+    /* Color/tint overlay + Opacity */
+    background: rgba(255, 255, 255, .6);
+    /* Tiled noise texture */
+    background-image: url(data:image/png;base64,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);
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
